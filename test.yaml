@@ -2,7 +2,7 @@ name: ssh-pipeline
 on:
   push:
     branches:
-      - main
+      - feature/scripts
 jobs:
   deploy:
     runs-on: GitHub 
@@ -22,7 +22,6 @@ jobs:
             # Your deployment script or commands go here
             # For example:
             echo "Hello, deploying your application!"
-            cd /github.com/12farooq/deploymentrepo.git
-            git pull origin main
+            git pull origin feature/scripts
             mkdir -p /home/github/test/test1
             mkdir -p /home/github/test/test2
